@@ -9,7 +9,7 @@ Tanpa Menggunakan Deklarasi Khusus
 from Modul_Wrapper import Wrap
 
 modul = Wrap(modul_path="modul.json")
-datetime = modul['datetime'].datetime.now().strftime("%H:%M")
+datetime = modul.modul['datetime'].datetime.now().strftime("%H:%M")
 print(datetime)
 ```
 
@@ -18,7 +18,7 @@ Menggunakan Deklarasi Khusus
 from Modul_Wrapper import Wrap
 
 modul = Wrap(modul_path="modul.json")
-datetime = modul['modul_jam'].datetime.now().strftime("%H:%M")
+datetime = modul.modul['modul_jam'].datetime.now().strftime("%H:%M")
 print(datetime)
 ```
 ## Konfigurasi Modul
@@ -40,11 +40,11 @@ Tanpa Menggunakan Deklarasi Khusus
 modul = Wrap(modul_path="modul.json")
 # modul_path adalah lokasi Dimana Konfigurasi Modul Disimpan
 
-datetime = modul['datetime'].datetime.now().strftime("%H:%M")
+datetime = modul.modul['datetime'].datetime.now().strftime("%H:%M")
 # Memanggil Modul Dengan class "datetime" kemudian Panggil Fungsi datetime.now()
 print(datetime)
 
-datetime = modul['modul_jam'].datetime.now().strftime("%H:%M")
+datetime = modul.modul['modul_jam'].datetime.now().strftime("%H:%M")
 # Memanggil Modul Dengan defined "datetime" kemudian Panggil Fungsi datetime.now()
 print(datetime)
 ```
